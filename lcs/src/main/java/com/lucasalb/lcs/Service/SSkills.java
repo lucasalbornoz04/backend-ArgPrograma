@@ -11,35 +11,35 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class SSkills {
-    
+
     @Autowired
     RSkills rSkills;
-    
-    public List<Skills> list(){
+
+    public List<Skills> list() {
         return rSkills.findAll();
     }
-    
-    public Optional<Skills> getOne(int id){
+
+    public Optional<Skills> getOne(int id) {
         return rSkills.findById(id);
     }
-    
-    public Optional<Skills> getByNombre(String nombreSkill){
+
+    public Optional<Skills> getByNombre(String nombreSkill) {
         return rSkills.findByNombreSkill(nombreSkill);
     }
-    
-    public void save(Skills skill){
+
+    public void save(Skills skill) {
         rSkills.save(skill);
     }
-    
-    public void delete(int id){
+
+    public void delete(int id) {
         rSkills.deleteById(id);
     }
-    
-    public boolean existsById(int id){
+
+    public boolean existsById(int id) {
         return rSkills.existsById(id);
     }
-    
-    public boolean existsByNombre(String nombreSkill){
+
+    public boolean existsByNombre(String nombreSkill) {
         return rSkills.existsByNombreSkill(nombreSkill);
     }
 }

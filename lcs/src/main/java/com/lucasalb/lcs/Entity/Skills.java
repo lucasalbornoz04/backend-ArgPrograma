@@ -7,14 +7,14 @@ import javax.persistence.Id;
 
 @Entity
 public class Skills {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreSkill;
     private String urlSkill;
-    
-    //Constructor
 
+    //Constructor
     public Skills() {
     }
 
@@ -22,10 +22,8 @@ public class Skills {
         this.nombreSkill = nombreSkill;
         this.urlSkill = urlSkill;
     }
-    
-    
-    //Getter and Setter
 
+    //Getter and Setter
     public int getId() {
         return id;
     }
@@ -49,6 +47,5 @@ public class Skills {
     public void setUrlSkill(String urlSkill) {
         this.urlSkill = urlSkill;
     }
-    
-    
+
 }

@@ -7,24 +7,25 @@ import javax.persistence.Id;
 
 @Entity
 public class Educacion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreEdu;
     private String fechaEdu;
-    
-    //Constructor
+    private String logoEdu;
 
+    //Constructor
     public Educacion() {
     }
 
-    public Educacion(String nombreEdu, String fechaEdu) {
+    public Educacion(String nombreEdu, String fechaEdu, String logoEdu) {
         this.nombreEdu = nombreEdu;
         this.fechaEdu = fechaEdu;
+        this.logoEdu = logoEdu;
     }
-    
-    //Getter and Setter
 
+    //Getter and Setter
     public int getId() {
         return id;
     }
@@ -49,5 +50,12 @@ public class Educacion {
         this.fechaEdu = fechaEdu;
     }
     
+    public String getLogoEdu () {
+        return logoEdu;
+    }
     
+    public void setLogoEdu (String logoEdu){
+        this.logoEdu = logoEdu;
+    }
+
 }

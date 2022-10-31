@@ -60,13 +60,13 @@ public class CProjecto {
             return new ResponseEntity(new Mensaje("Ese projecto ya existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Projecto projecto = new Projecto(dtoProj.getNombrePro(), dtoProj.getImgPro());
+        Projecto projecto = new Projecto(dtoProj.getNombrePro(), dtoProj.getImgPro(), dtoProj.getUrlPro());
         sProjecto.save(projecto);
 
         return new ResponseEntity(new Mensaje("Projecto agregado"), HttpStatus.OK);
     }
 
-    @PutMapping("edit/{id}")
+    @PutMapping("/edit/{id}")
     public ResponseEntity<?> edit(@PathVariable("id") int id, @RequestBody dtoProjecto dtoProj) {
         if (!sProjecto.existsById(id)) {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
@@ -81,6 +81,7 @@ public class CProjecto {
         Projecto projecto = sProjecto.getOne(id).get();
         projecto.setNombrePro(dtoProj.getNombrePro());
         projecto.setImgPro(dtoProj.getImgPro());
+        projecto.setUrlPro(dtoProj.getUrlPro());
 
         sProjecto.save(projecto);
         return new ResponseEntity(new Mensaje("Projecto editado"), HttpStatus.OK);

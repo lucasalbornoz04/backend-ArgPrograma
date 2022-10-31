@@ -2,6 +2,7 @@ package com.lucasalb.lcs.Dto;
 
 import javax.validation.constraints.NotBlank;
 
+
 public class dtoPersona {
     @NotBlank
     private String nombre;
@@ -13,9 +14,9 @@ public class dtoPersona {
     private String urlImg;
     @NotBlank
     private String descripcion;
-
     
-    //Constructor
+    //constructor
+
     public dtoPersona() {
     }
 
@@ -26,8 +27,9 @@ public class dtoPersona {
         this.urlImg = urlImg;
         this.descripcion = descripcion;
     }
-
+    
     //Getter and Setter
+
     public String getNombre() {
         return nombre;
     }
@@ -68,5 +70,4 @@ public class dtoPersona {
         this.descripcion = descripcion;
     }
     
-        
 }

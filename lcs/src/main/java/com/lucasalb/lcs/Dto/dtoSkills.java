@@ -3,14 +3,13 @@ package com.lucasalb.lcs.Dto;
 import javax.validation.constraints.NotBlank;
 
 public class dtoSkills {
-    
+
     @NotBlank
     private String nombreSkill;
     @NotBlank
     private String urlSkill;
-    
-    //Constructor
 
+    //Constructor
     public dtoSkills() {
     }
 
@@ -18,10 +17,8 @@ public class dtoSkills {
         this.nombreSkill = nombreSkill;
         this.urlSkill = urlSkill;
     }
-    
-    
-    //Getter and Setter
 
+    //Getter and Setter
     public String getNombreSkill() {
         return nombreSkill;
     }
@@ -37,6 +34,5 @@ public class dtoSkills {
     public void setUrlSkill(String urlSkill) {
         this.urlSkill = urlSkill;
     }
-    
-    
+
 }

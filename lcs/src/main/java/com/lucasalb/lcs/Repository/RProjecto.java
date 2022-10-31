@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RProjecto extends JpaRepository<Projecto, Integer>{
+public interface RProjecto extends JpaRepository<Projecto, Integer> {
+
     public Optional<Projecto> findByNombrePro(String nombrePro);
+
     public boolean existsByNombrePro(String nombrePro);
 }
